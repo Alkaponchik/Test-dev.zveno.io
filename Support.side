@@ -1,0 +1,440 @@
+{
+  "id": "8d4243af-9714-4a4b-8121-7343595987c7",
+  "version": "2.0",
+  "name": "Test",
+  "url": "https://dev.zveno.io/login",
+  "tests": [{
+    "id": "b558089d-7054-400f-8470-9b6ac2fa76e6",
+    "name": "Support",
+    "commands": [{
+      "id": "faf4dc81-bcde-4b5a-94db-462fc14eb260",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev.zveno.io/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3c2d562-2b23-4b59-beb8-09df179a76fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-card",
+      "targets": [
+        ["css=.login-card", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f94010d-6b12-426b-9765-dca4604cf9d2",
+      "comment": "",
+      "command": "type",
+      "target": "id=input-18",
+      "targets": [
+        ["id=input-18", "id"],
+        ["css=#input-18", "css:finder"],
+        ["xpath=//input[@id='input-18']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div[2]/form/div[2]/div/div[2]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "support@gmail.com"
+    }, {
+      "id": "8b923b22-6e8f-4f11-bb40-a253b124ede3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-card",
+      "targets": [
+        ["css=.login-card", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40e534e3-2e54-4e5e-98a5-5d2a9f64a8e0",
+      "comment": "",
+      "command": "type",
+      "target": "id=input-22",
+      "targets": [
+        ["id=input-22", "id"],
+        ["css=#input-22", "css:finder"],
+        ["xpath=//input[@id='input-22']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div[2]/form/div[3]/div/div[2]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Zz!123456"
+    }, {
+      "id": "54afa436-5549-42af-9b64-de594131b65e",
+      "comment": "",
+      "command": "click",
+      "target": "name=Войти",
+      "targets": [
+        ["name=Войти", "name"],
+        ["css=.v-btn", "css:finder"],
+        ["xpath=//button[@name='Войти']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div[2]/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Войти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b478e256-420a-4a26-a0e5-789bc75704d4",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.main-navigation-list-item-logo",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "86c161bb-9cbe-45e6-a9f0-194560e586a2",
+      "comment": "Проверяем успешный вход в приложение",
+      "command": "assertElementPresent",
+      "target": "css=.main-navigation-list-item-logo",
+      "targets": [
+        ["css=.main-navigation-list-item-logo", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/nav/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "553ad865-cf17-491e-98bc-b998c6967853",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-navigation-list-item span",
+      "targets": [
+        ["css=.main-navigation-list-item span", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/nav/div/div[2]/a/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//a/div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Техподдержка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25dcce3a-70e7-4be2-b3dd-ca11e843969e",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d46c483-53a4-441d-ba44-1bb53c409c0a",
+      "comment": "",
+      "command": "click",
+      "target": "name=Отменить",
+      "targets": [
+        ["name=Отменить", "name"],
+        ["css=.cancel", "css:finder"],
+        ["xpath=//button[@name='Отменить']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//form/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Отменить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "462787bc-ff79-496f-8004-0789252f9bac",
+      "comment": "Проверяем, что кнопка \"Сохранить\" не активна при не заполненных обязательных полях",
+      "command": "assertNotEditable",
+      "target": "name=Сохранить",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "1e448564-f1b0-4f4f-9228-3bc7bd3945c5",
+      "comment": "",
+      "command": "clickAt",
+      "target": "css=.v-select__selections",
+      "targets": [
+        ["css=.v-select__selections", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div/div[2]/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "456dc0e0-58b8-4257-83b4-3de584362b7c",
+      "comment": "",
+      "command": "clickAt",
+      "target": "css=.v-textarea .v-input__slot",
+      "targets": [
+        ["css=.v-textarea .v-input__slot", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div[2]/div[2]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f94a4ad-f32d-4388-b690-9de63dfaf4e0",
+      "comment": "Проверяем на наличие информационного сообщения при не заполненном поле \"Тип заявки\" ",
+      "command": "assertElementPresent",
+      "target": "css=.v-messages__message",
+      "targets": [
+        ["css=.v-messages__message", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div/div[2]/div/div/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div/div/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": "Поле обязательно для заполнения"
+    }, {
+      "id": "eb5b363b-739d-48e2-a7f1-9c4828b548a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-input__icon--append > .v-icon",
+      "targets": [
+        ["css=.v-input__icon--append > .v-icon", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div/div[2]/div/div/div/div/div[2]/div/i", "xpath:idRelative"],
+        ["xpath=//div[2]/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cc527e3-63f7-451c-9a25-805a2d45341c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-list-item__content:nth-child(1)",
+      "targets": [
+        ["css=.v-list-item__content:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='list-item-184-0']/div", "xpath:idRelative"],
+        ["xpath=//body/div[3]/div/div/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef1bca40-ceb8-456a-89ad-8c1bdf6449f9",
+      "comment": "Проверяем, что кнопка \"Сохранить\" не активна при заполненном  \"Типе заявки\", но не заполненном \"Описании проблемы\"",
+      "command": "assertNotEditable",
+      "target": "name=Сохранить",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "d0e020cc-5907-4c40-8cb5-ae4924a0b8f5",
+      "comment": "Проверяем на наличие информационного сообщения при не заполненном поле \"Описание проблемы\" ",
+      "command": "assertElementPresent",
+      "target": "css=.v-list-group__header > .v-list-item__content",
+      "targets": [
+        ["css=.v-list-group__header > .v-list-item__content", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/nav/div/div[2]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]", "xpath:position"]
+      ],
+      "value": "Поле обязательно для заполнения"
+    }, {
+      "id": "8aaea22b-1ad7-4208-bb40-56d23fe34761",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//textarea",
+      "targets": [
+        ["id=input-192", "id"],
+        ["css=#input-192", "css:finder"],
+        ["xpath=//textarea[@id='input-192']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div[2]/div[2]/div/div/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d839405-e1e6-44b5-8325-a9246d816057",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//textarea",
+      "targets": [
+        ["id=input-172", "id"],
+        ["css=#input-172", "css:finder"],
+        ["xpath=//textarea[@id='input-172']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div[2]/div[2]/div/div/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "TEST"
+    }, {
+      "id": "509ddce2-1823-46f4-a78f-418b3ecd0d8e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-file-input__text",
+      "targets": [
+        ["css=.v-file-input__text", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div[3]/div/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a24e573-7737-4422-98f5-323df7b04792",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.v-chip__content",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a9749a4c-3ad3-443f-a403-ff35544e52fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mdi-close",
+      "targets": [
+        ["css=.mdi-close", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div[3]/div/div[2]/div[2]/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "790b9f09-e3e2-4e50-84a2-4bb01d1c5857",
+      "comment": "Сохраняем обращение",
+      "command": "click",
+      "target": "name=Сохранить",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ddd5802a-42a1-473b-b0a4-5edcc83c067a",
+      "comment": "Проверяем успешность отправки",
+      "command": "assertText",
+      "target": "css=.\\_modal-caption",
+      "targets": [
+        ["css=.\\_modal-caption", "css:finder"],
+        ["xpath=//div[@id='app']/div[4]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div", "xpath:position"]
+      ],
+      "value": "Обращение в техническую поддержку"
+    }, {
+      "id": "86e4a3e2-7c04-4f4f-9604-8d32c4b7175d",
+      "comment": "",
+      "command": "click",
+      "target": "name=Ок",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ddf35c3-8250-4eca-98f3-03da97a6c5a4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-input__icon--append > .v-icon",
+      "targets": [
+        ["css=.v-input__icon--append > .v-icon", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div/div[2]/div/div/div/div/div[2]/div/i", "xpath:idRelative"],
+        ["xpath=//div[2]/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1971f382-4644-4cc7-a6d6-65f25f5208aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-list-item__content:nth-child(1)",
+      "targets": [
+        ["css=.v-list-item__content:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='list-item-184-0']/div", "xpath:idRelative"],
+        ["xpath=//body/div[3]/div/div/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae1aa381-4fb5-44ae-94a8-692409c4d860",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//textarea",
+      "targets": [
+        ["id=input-192", "id"],
+        ["css=#input-192", "css:finder"],
+        ["xpath=//textarea[@id='input-192']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div[2]/div[2]/div/div/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26c82267-a5af-4d9c-99d4-10e17afb90c6",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//textarea",
+      "targets": [
+        ["id=input-172", "id"],
+        ["css=#input-172", "css:finder"],
+        ["xpath=//textarea[@id='input-172']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div[2]/div[2]/div/div/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "TEST"
+    }, {
+      "id": "434e8e3c-e2b6-46c1-b843-5e6ac52c3293",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-file-input__text",
+      "targets": [
+        ["css=.v-file-input__text", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/form/div[3]/div/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44a0c6fc-63e0-4531-99bd-089458b18a9d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.v-chip__content",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "3b27d3c7-1a20-456a-a5c9-9795b79bb162",
+      "comment": "Сохраняем обращение",
+      "command": "click",
+      "target": "name=Сохранить",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38eb42c9-5e4f-4b51-afbc-a756d7483fe4",
+      "comment": "Проверяем успешность отправки",
+      "command": "assertText",
+      "target": "css=.\\_modal-caption",
+      "targets": [
+        ["css=.\\_modal-caption", "css:finder"],
+        ["xpath=//div[@id='app']/div[4]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div", "xpath:position"]
+      ],
+      "value": "Обращение в техническую поддержку"
+    }, {
+      "id": "e4b2878d-d2a7-49ce-bfee-02e428b9eaca",
+      "comment": "",
+      "command": "click",
+      "target": "name=Ок",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7c4ddb7-ad6d-449a-9ccf-72764e5f4c16",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-avatar img",
+      "targets": [
+        ["css=.v-avatar img", "css:finder"],
+        ["xpath=(//img[@alt='zveno.io'])[4]", "xpath:img"],
+        ["xpath=//div[@id='app']/div/div[2]/header/div/button/span/div/div/img", "xpath:idRelative"],
+        ["xpath=//span/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79428d91-804c-438a-a176-d9be809a3afd",
+      "comment": "Выходим из приложения",
+      "command": "click",
+      "target": "linkText=Выйти",
+      "targets": [
+        ["id=list-item-206", "id"],
+        ["linkText=Выйти", "linkText"],
+        ["css=#list-item-206", "css:finder"],
+        ["xpath=//a[@id='list-item-206']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[3]/div/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Выйти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ddde525-bae7-4977-ab81-bcaad995d892",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.login-form-title",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "bd2ffa6c-c37b-4d3a-b08b-7817c4ed7de5",
+      "comment": "Проверяем успешность выхода из приложения",
+      "command": "assertElementPresent",
+      "target": "css=.login-form-title",
+      "targets": [
+        ["css=.login-form-title", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div/div[2]/form/div/div", "xpath:idRelative"],
+        ["xpath=//form/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a207bbdb-e2eb-437c-96af-d8b601685154",
+    "name": "All tests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b558089d-7054-400f-8470-9b6ac2fa76e6"]
+  }],
+  "urls": ["https://dev.zveno.io/login"],
+  "plugins": []
+}
